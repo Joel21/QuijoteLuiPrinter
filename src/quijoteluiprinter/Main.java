@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package quijoteluiprinter;
 
 import com.quijotelui.printer.pdf.FacturaPDF;
@@ -21,7 +16,7 @@ public class Main {
     }
 
     static void imprimirFacturaPDF() {
-        FacturaPDF pdf = new FacturaPDF("/data/git/QuijoteLui/app/QuijoteLuiPrinter/recursos/reportes",
+        FacturaPDF pdf = new FacturaPDF("./recursos/reportes",
                 "/data/git/QuijoteLui/app/QuijoteLuiPrinter/recursos/imagenes/logo.jpeg",
                 "/data/Quijotelui/comprobante/pdf");
 
