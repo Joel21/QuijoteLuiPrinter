@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b7dda71-cdab-4c50-81e6-b96db76ea11f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.jasper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quijoteluiprinter/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/quijoteluiprinter/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="1b7dda71-cdab-4c50-81e6-b96db76ea11f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,6 +57,26 @@
               <item name="QuijoteLuiPrinter" type="b2602c69:ProjectViewProjectNode" />
               <item name="QuijoteLuiPrinter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuijoteLuiPrinter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuijoteLuiPrinter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="printer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuijoteLuiPrinter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuijoteLuiPrinter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="printer" type="462c0819:PsiDirectoryNode" />
+              <item name="factura" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="QuijoteLuiPrinter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="QuijoteLuiPrinter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="printer" type="462c0819:PsiDirectoryNode" />
+              <item name="utilidades" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="QuijoteLuiPrinter" type="b2602c69:ProjectViewProjectNode" />
@@ -167,7 +182,7 @@
       <window_info anchor="right" id="Leiningen" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -215,10 +230,45 @@
     <entry file="file://$PROJECT_DIR$/recursos/reportes/comprobanteRetencion.jrxml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/factura/Impuesto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/factura/Factura.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
+        <state relative-caret-position="240">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/pdf/FacturaPDF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2679">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/utilidades/Tipos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/utilidades/TipoImpuestoIvaEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/quijotelui/printer/utilidades/TipoImpuestoEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>

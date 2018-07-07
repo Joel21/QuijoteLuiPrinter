@@ -17,12 +17,12 @@ public class Main {
 
     static void imprimirFacturaPDF() {
         FacturaPDF pdf = new FacturaPDF("./recursos/reportes",
-                "/data/git/QuijoteLui/app/QuijoteLuiPrinter/recursos/imagenes/logo.jpeg",
-                "/data/Quijotelui/comprobante/pdf");
+                "/data/jaque_mate/1002704334001/imagen/logo.jpeg",
+                "/data/jaque_mate/1002704334001/pdf");
 
-        pdf.genera("/data/Quijotelui/comprobante/generado/"
-                + "1712201701100245687700110010030030048911234567813.xml",
-                "1712201701100245687700110010030030048911234567813",
+        pdf.genera("/data/jaque_mate/1002704334001/xml/"
+                + "2006201801100270433400120010020000002341234567819.xml",
+                "2006201801100270433400120010020000002341234567819",
                 "01/01/0001 00:00:00");
     }
     
