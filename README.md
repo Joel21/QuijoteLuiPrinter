@@ -1,5 +1,5 @@
 # QuijoteLuiPrinter
-Aplicación para generar RIDE en formato PDF
+Aplicación para generar RIDE en formato PDF de los comprobantes electrónicos del SRI Ecuador
 
 ## Para compilar.
 ```
