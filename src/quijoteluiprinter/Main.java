@@ -17,10 +17,10 @@ public class Main {
 
     static void imprimirFacturaPDF() {
         FacturaPDF pdf = new FacturaPDF("./recursos/reportes",
-                "/data/jaque_mate/1002704334001/imagen/logo.jpeg",
-                "/data/jaque_mate/1002704334001/pdf");
+                "/imagen/logo.jpeg",
+                "/documentos/pdf");
 
-        pdf.genera("/data/jaque_mate/1002704334001/xml/"
+        pdf.genera("/generado/xml/"
                 + "2006201801100270433400120010020000002341234567819.xml",
                 "2006201801100270433400120010020000002341234567819",
                 "01/01/0001 00:00:00");
