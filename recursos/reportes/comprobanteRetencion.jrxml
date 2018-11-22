@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprobanteRetencion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3eaa0e8-2300-4d0d-bb98-ea16c8d01451">
-	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="288"/>
+	<property name="ireport.y" value="864"/>
 	<parameter name="RUC" class="java.lang.String"/>
 	<parameter name="NUM_AUT" class="java.lang.String"/>
 	<parameter name="FECHA_AUT" class="java.lang.String"/>
@@ -312,14 +312,14 @@
 				<reportElement mode="Transparent" x="284" y="0" width="1" height="28" uuid="9f664492-3d63-4149-b7bb-a97d5ff2d5d4"/>
 			</line>
 			<staticText>
-				<reportElement mode="Transparent" x="231" y="0" width="51" height="28" uuid="f7154d7f-c7e5-489e-a917-fd41b49393ae"/>
+				<reportElement mode="Transparent" x="232" y="0" width="51" height="28" uuid="f7154d7f-c7e5-489e-a917-fd41b49393ae"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Ejercicio Fiscal]]></text>
 			</staticText>
 			<line>
-				<reportElement mode="Transparent" x="228" y="0" width="1" height="28" uuid="ae410c6e-af3e-40cc-a59f-d50b7cf8e634"/>
+				<reportElement mode="Transparent" x="230" y="0" width="1" height="28" uuid="ae410c6e-af3e-40cc-a59f-d50b7cf8e634"/>
 			</line>
 			<line>
 				<reportElement mode="Transparent" x="69" y="0" width="1" height="28" uuid="fc29e7b8-a7ad-4f0b-bf92-ebf73b54a1ed"/>
@@ -332,7 +332,7 @@
 				<text><![CDATA[Comprobante]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="71" y="0" width="51" height="28" uuid="63a3a47d-7fa1-4c19-a0e7-b48e1e88f251"/>
+				<reportElement mode="Transparent" x="73" y="0" width="51" height="28" uuid="63a3a47d-7fa1-4c19-a0e7-b48e1e88f251"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -396,7 +396,7 @@
 				<reportElement mode="Transparent" x="284" y="0" width="1" height="25" uuid="2632a6ce-6935-44a3-b73e-9f59550f792b"/>
 			</line>
 			<line>
-				<reportElement mode="Transparent" x="228" y="0" width="1" height="25" uuid="67993c0a-12b0-4653-80c6-8607f6bb73a1"/>
+				<reportElement mode="Transparent" x="230" y="0" width="1" height="25" uuid="67993c0a-12b0-4653-80c6-8607f6bb73a1"/>
 			</line>
 			<line>
 				<reportElement mode="Transparent" x="69" y="0" width="1" height="25" uuid="52abd1c1-b845-4d34-b9c4-cd1106239319"/>
@@ -416,7 +416,7 @@
 				<textFieldExpression><![CDATA[$F{numeroComprobante}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="231" y="0" width="51" height="25" uuid="c27d451b-7f0f-4505-86d9-bc607b320d99"/>
+				<reportElement x="232" y="0" width="51" height="25" uuid="c27d451b-7f0f-4505-86d9-bc607b320d99"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
@@ -426,8 +426,8 @@
 				<reportElement mode="Transparent" x="166" y="0" width="1" height="25" uuid="97e5ab4b-f310-4ef5-b74d-ffd1a91e2b62"/>
 			</line>
 			<textField>
-				<reportElement x="169" y="0" width="58" height="25" uuid="83990487-9c48-4c0f-a8b7-8717d4d5c59a"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement x="167" y="6" width="63" height="14" uuid="83990487-9c48-4c0f-a8b7-8717d4d5c59a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fechaEmisionCcompModificado}]]></textFieldExpression>
