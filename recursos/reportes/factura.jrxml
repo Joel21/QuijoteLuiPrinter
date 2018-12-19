@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a90b5cc6-9a35-48d7-a2d0-ef67a99b13b8">
-	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="45"/>
-	<property name="ireport.y" value="576"/>
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="30"/>
+	<property name="ireport.y" value="864"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -348,14 +348,14 @@
 				<reportElement mode="Transparent" x="0" y="0" width="555" height="28" uuid="86ee8a05-8167-41ed-9db0-134263408586"/>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="0" width="45" height="28" uuid="234b2bce-1a99-485d-8291-55bffdbd4402"/>
+				<reportElement mode="Transparent" x="2" y="0" width="37" height="28" uuid="234b2bce-1a99-485d-8291-55bffdbd4402"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Cod. Principal]]></text>
+				<text><![CDATA[Cod.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="49" y="0" width="34" height="28" uuid="9daed0bc-6296-437d-9461-f94edc3c8572"/>
+				<reportElement mode="Transparent" x="53" y="0" width="34" height="28" uuid="9daed0bc-6296-437d-9461-f94edc3c8572"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -376,7 +376,7 @@
 				<text><![CDATA[PrecioTotal]]></text>
 			</staticText>
 			<line>
-				<reportElement mode="Opaque" x="45" y="0" width="1" height="28" uuid="95258515-762a-47f5-8bc8-ea2163f0f894"/>
+				<reportElement mode="Opaque" x="40" y="0" width="1" height="28" uuid="95258515-762a-47f5-8bc8-ea2163f0f894"/>
 			</line>
 			<line>
 				<reportElement mode="Opaque" x="380" y="0" width="1" height="28" uuid="e02d2368-20da-4b0d-9163-dc822d8d64eb"/>
@@ -402,7 +402,7 @@
 				<text><![CDATA[Descuento]]></text>
 			</staticText>
 			<line>
-				<reportElement mode="Opaque" x="86" y="0" width="1" height="28" uuid="7c39c14e-940a-479c-8121-be5543c2bb73"/>
+				<reportElement mode="Opaque" x="102" y="0" width="1" height="28" uuid="7c39c14e-940a-479c-8121-be5543c2bb73"/>
 			</line>
 		</band>
 	</columnHeader>
@@ -412,14 +412,14 @@
 				<reportElement mode="Transparent" x="0" y="0" width="555" height="25" uuid="cf2abc24-11dd-4a65-bf79-79a751c365ff"/>
 			</rectangle>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Transparent" x="48" y="-1" width="34" height="21" uuid="44769957-9ef0-468b-8f2f-41423e435d0d"/>
+				<reportElement mode="Transparent" x="41" y="0" width="61" height="21" uuid="44769957-9ef0-468b-8f2f-41423e435d0d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement mode="Opaque" x="45" y="0" width="1" height="25" uuid="5ca43ca6-b23e-4952-8caa-8f646383c515"/>
+				<reportElement mode="Opaque" x="40" y="0" width="1" height="25" uuid="5ca43ca6-b23e-4952-8caa-8f646383c515"/>
 			</line>
 			<line>
 				<reportElement mode="Opaque" x="380" y="0" width="1" height="25" uuid="d9bd07ff-4448-49de-925f-84fb4fe832c8"/>
@@ -435,14 +435,14 @@
 				<textFieldExpression><![CDATA[$F{precioTotalSinImpuesto}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement mode="Transparent" x="0" y="0" width="41" height="24" uuid="0913408d-d2fa-46eb-b8d6-3b7629b66036"/>
+				<reportElement mode="Transparent" x="3" y="0" width="34" height="24" uuid="0913408d-d2fa-46eb-b8d6-3b7629b66036"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{codigoPrincipal}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="93" y="1" width="273" height="24" uuid="9315ec93-9bfa-4998-b5d6-8ea451958ef5"/>
+				<reportElement x="104" y="1" width="273" height="24" uuid="9315ec93-9bfa-4998-b5d6-8ea451958ef5"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
@@ -466,7 +466,7 @@
 				<textFieldExpression><![CDATA[$F{descuento}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement mode="Opaque" x="86" y="0" width="1" height="25" uuid="8709e69f-486b-42cb-9328-aec72a461452"/>
+				<reportElement mode="Opaque" x="102" y="0" width="1" height="25" uuid="8709e69f-486b-42cb-9328-aec72a461452"/>
 			</line>
 		</band>
 	</detail>
