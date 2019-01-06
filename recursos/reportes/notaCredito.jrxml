@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="notaCredito" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1200836a-13da-4b96-961b-5189b5ece52a">
-	<property name="ireport.zoom" value="3.0"/>
-	<property name="ireport.x" value="334"/>
-	<property name="ireport.y" value="864"/>
+	<property name="ireport.zoom" value="2.0490403660952117"/>
+	<property name="ireport.x" value="81"/>
+	<property name="ireport.y" value="100"/>
 	<parameter name="RUC" class="java.lang.String"/>
 	<parameter name="NUM_AUT" class="java.lang.String"/>
 	<parameter name="FECHA_AUT" class="java.lang.String"/>
@@ -108,9 +108,9 @@
 				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement mode="Transparent" x="264" y="90" width="296" height="18" uuid="8d288789-5a34-4a41-afd9-56de4f933a22"/>
+				<reportElement mode="Transparent" x="253" y="90" width="316" height="18" uuid="8d288789-5a34-4a41-afd9-56de4f933a22"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="false"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($P{NUM_AUT}==null)?"NO ENVIADO":$P{NUM_AUT}]]></textFieldExpression>
 			</textField>
@@ -132,7 +132,7 @@
 				<textFieldExpression><![CDATA[$P{RUC}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Transparent" x="263" y="229" width="297" height="20" uuid="6c91b424-42ff-4522-b69f-c42a2aa49f02"/>
+				<reportElement mode="Transparent" x="253" y="229" width="316" height="20" uuid="6c91b424-42ff-4522-b69f-c42a2aa49f02"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
