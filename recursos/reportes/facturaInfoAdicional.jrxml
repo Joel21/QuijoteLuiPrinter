@@ -20,14 +20,14 @@
 	<detail>
 		<band height="24" splitType="Stretch">
 			<textField isBlankWhenNull="true">
-				<reportElement x="0" y="2" width="68" height="22" uuid="63bbeb36-090a-4c08-a90f-3137bab55026"/>
+				<reportElement x="0" y="2" width="41" height="22" uuid="63bbeb36-090a-4c08-a90f-3137bab55026"/>
 				<textElement>
 					<font fontName="Monospaced" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="68" y="2" width="232" height="22" uuid="cf4144b6-d823-4ef5-95cf-b6fbe5546b7a"/>
+				<reportElement x="41" y="2" width="259" height="22" uuid="cf4144b6-d823-4ef5-95cf-b6fbe5546b7a"/>
 				<textElement>
 					<font fontName="Monospaced" size="8"/>
 				</textElement>
