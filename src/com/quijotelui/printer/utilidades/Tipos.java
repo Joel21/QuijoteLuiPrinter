@@ -27,6 +27,9 @@ public class Tipos {
         if ("01".equals(codDoc)) {
             return "FACTURA";
         }
+        if ("03".equals(codDoc)) {
+            return "LIQUIDACIÓN DE COMPRA";
+        }
         if ("04".equals(codDoc)) {
             return "NOTA DE CRÉDITO";
         }

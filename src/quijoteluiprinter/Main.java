@@ -1,6 +1,6 @@
 package quijoteluiprinter;
 
-import com.quijotelui.printer.pdf.FacturaPDF;
+import com.quijotelui.printer.pdf.*;
 
 /**
  *
@@ -16,13 +16,13 @@ public class Main {
     }
 
     static void imprimirFacturaPDF() {
-        FacturaPDF pdf = new FacturaPDF("./recursos/reportes",
-                "/imagen/logo.jpeg",
-                "/documentos/pdf");
+        LiquidacionCompraPDF pdf = new LiquidacionCompraPDF("/data/git/QuijoteLuiPrinter/recursos/reportes",
+                "/data/git/QuijoteLuiPrinter/recursos/imagenes/logo.jpeg",
+                "/app/QuijoteLui/comprobante/pdf");
 
-        pdf.genera("/generado/xml/"
-                + "2006201801100270433400120010020000002341234567819.xml",
-                "2006201801100270433400120010020000002341234567819",
+        pdf.genera("/app/QuijoteLui/comprobante/generado/"
+                + "2502202003100245687700110010020000000021234567815.xml",
+                "2502202003100245687700110010020000000021234567815",
                 "01/01/0001 00:00:00");
     }
     
