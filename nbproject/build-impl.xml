@@ -21,9 +21,7 @@ is divided into following sections:
 
         -->
 <project xmlns:if="ant:if" xmlns:j2seproject1="http://www.netbeans.org/ns/j2se-project/1" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxrpc="http://www.netbeans.org/ns/j2se-project/jax-rpc" xmlns:unless="ant:unless" basedir=".." default="default" name="QuijoteLuiPrinter-impl">  
-  <property name="kotlin.lib" value="/home/jorgequiguango/.netbeans/11.2/kotlinc/lib"/>  
-  <typedef classpath="${kotlin.lib}/kotlin-ant.jar" resource="org/jetbrains/kotlin/ant/antlib.xml"/>  
-  <fail message="Please build using Ant 1.8.0 or higher."> 
+  <fail message="Please build using Ant 1.8.0 or higher.">
     <condition> 
       <not> 
         <antversion atleast="1.8.0"/> 
@@ -402,8 +400,7 @@ is divided into following sections:
             <dirset dir="@{gensrcdir}" erroronmissingdir="false"> 
               <include name="*"/> 
             </dirset> 
-          </src>  
-          <withKotlin/>
+          </src>
           <classpath> 
             <path path="@{classpath}"/> 
           </classpath>  
