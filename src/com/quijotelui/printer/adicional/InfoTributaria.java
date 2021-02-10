@@ -16,7 +16,19 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="infoTributaria", propOrder={"ambiente", "tipoEmision", "razonSocial", "nombreComercial", "ruc", "claveAcceso", "codDoc", "estab", "ptoEmi", "secuencial", "dirMatriz"})
+@XmlType(name="infoTributaria", propOrder={"ambiente", 
+                                           "tipoEmision", 
+                                           "razonSocial", 
+                                           "nombreComercial", 
+                                           "ruc", 
+                                           "claveAcceso", 
+                                           "codDoc", 
+                                           "estab", 
+                                           "ptoEmi", 
+                                           "secuencial", 
+                                           "dirMatriz",
+                                           "regimenMicroempresas",
+                                           "agenteRetencion"})
 public class InfoTributaria
 {
 
@@ -50,6 +62,9 @@ public class InfoTributaria
 
   @XmlElement(required=true)
   protected String dirMatriz;
+  
+  protected String regimenMicroempresas;
+  protected String agenteRetencion;
 
     public InfoTributaria() {
     }
@@ -179,4 +194,20 @@ public class InfoTributaria
   {
     this.dirMatriz = value;
   }
+  
+  public String getRegimenMicroempresas() {
+        return regimenMicroempresas;
+    }
+
+    public void setRegimenMicroempresas(String regimenMicroempresas) {
+        this.regimenMicroempresas = regimenMicroempresas;
+    }
+
+    public String getAgenteRetencion() {
+        return agenteRetencion;
+    }
+
+    public void setAgenteRetencion(String agenteRetencion) {
+        this.agenteRetencion = agenteRetencion;
+    }    
 }

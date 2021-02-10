@@ -32,8 +32,7 @@ import java.util.logging.Logger;
 public class Parametros {
     
     String direccionReportes;
-    String direccionLogoJpeg;
-    
+    String direccionLogoJpeg;    
 
     public Parametros(String direccionReportes, String direccionLogoJpeg) {
         /*
@@ -42,8 +41,7 @@ public class Parametros {
         */
         this.direccionReportes = direccionReportes;
         this.direccionLogoJpeg = direccionLogoJpeg;
-    }
-    
+    }    
 
     public Map<String, Object> obtenerParametrosInfoTriobutaria(InfoTributaria infoTributaria, String numAut, String fechaAut) {
         Map param = new HashMap();
@@ -51,6 +49,8 @@ public class Parametros {
         param.put("CLAVE_ACC", infoTributaria.getClaveAcceso());
         param.put("RAZON_SOCIAL", infoTributaria.getRazonSocial());
         param.put("DIR_MATRIZ", infoTributaria.getDirMatriz());
+        param.put("AGENTE_RETENCION", infoTributaria.getAgenteRetencion());
+        param.put("REGIMEN_MICROEMPRESAS", infoTributaria.getRegimenMicroempresas());
         try {
             param.put("LOGO", new FileInputStream(this.direccionLogoJpeg));
 //            param.put("LOGO", new FileInputStream("resources/images/logo.jpeg"));
