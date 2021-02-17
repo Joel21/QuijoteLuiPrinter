@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprobanteRetencion" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3eaa0e8-2300-4d0d-bb98-ea16c8d01451">
 	<property name="ireport.zoom" value="1.8627639691774651"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="388"/>
+	<property name="ireport.y" value="292"/>
 	<parameter name="RUC" class="java.lang.String"/>
 	<parameter name="NUM_AUT" class="java.lang.String"/>
 	<parameter name="FECHA_AUT" class="java.lang.String"/>
@@ -222,7 +222,7 @@
 				<text><![CDATA[Contribuyente Especial Nro ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="5" y="261" width="177" height="14" uuid="28212bb5-1a61-471d-bc40-b95e8c3b0693"/>
+				<reportElement x="5" y="261" width="191" height="14" uuid="28212bb5-1a61-471d-bc40-b95e8c3b0693"/>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
