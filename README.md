@@ -3,11 +3,16 @@ Aplicación para generar RIDE en formato PDF de los comprobantes electrónicos d
 
 ## Para compilar.
 ```
-$ ant
+ant
 ```
-## Para publicar en en repositorio Maven Local.
+## Comando en terminal para publicar en el repositorio Maven Local (Linux/Mac)
 ```
-$ mvn install:install-file -Dfile=./dist/QuijoteLuiPrinter-1.3.jar -DgroupId=com.quijotelui.printer -DartifactId=QuijoteLuiPrinter -Dversion=1.3 -Dpackaging=jar
+mvn install:install-file -Dfile=./dist/QuijoteLuiPrinter-1.3.jar -DgroupId=com.quijotelui.printer -DartifactId=QuijoteLuiPrinter -Dversion=1.3 -Dpackaging=jar
+```
+## Comando en terminal para publicar en el repositorio Maven Local (Windows)
+```
+cd .\dist\
+mvn install:install-file "-Dfile=QuijoteLuiPrinter-1.3.jar" "-DgroupId=com.quijotelui.printer" "-DartifactId=QuijoteLuiPrinter" "-Dversion=1.3 -Dpackaging=jar"
 ```
 ### Documentación
 https://www.allku.expert/quijotelui-printer/
