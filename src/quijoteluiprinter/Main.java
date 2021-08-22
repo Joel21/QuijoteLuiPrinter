@@ -12,18 +12,18 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        imprimirFacturaPDF();
+        imprimir();
     }
 
-    static void imprimirFacturaPDF() {
-        LiquidacionCompraPDF pdf = new LiquidacionCompraPDF("/data/git/QuijoteLuiPrinter/recursos/reportes",
-                "/data/git/QuijoteLuiPrinter/recursos/imagenes/logo.jpeg",
+    static void imprimir() {
+        NotaDebitoPDF pdf = new NotaDebitoPDF(
+                "/home/jorge/Projects/QuijoteLuiPrinter/recursos/reportes",
+                "/app/QuijoteLui/logo.jpeg",
                 "/app/QuijoteLui/comprobante/pdf");
 
         pdf.genera("/app/QuijoteLui/comprobante/generado/"
-                + "2502202003100245687700110010020000000021234567815.xml",
-                "2502202003100245687700110010020000000021234567815",
+                + "1808202105109170775200110010040000000011234567813.xml",
+                "1808202105109170775200110010040000000011234567813",
                 "01/01/0001 00:00:00");
     }
-    
 }

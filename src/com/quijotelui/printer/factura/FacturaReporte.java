@@ -140,8 +140,6 @@ public class FacturaReporte {
     }
 
     private String obtenerDetalleFormaPago(String codigo) {
-
         return "";
-
     }
 }

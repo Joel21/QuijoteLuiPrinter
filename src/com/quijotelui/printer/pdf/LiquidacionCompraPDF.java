@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 jorgequiguango
+ * Copyright (C) 2020 Jorge Luis
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 /**
  *
- * @author jorjoluiso
+ * @author Jorge Luis
  */
 public class LiquidacionCompraPDF {
 
@@ -72,18 +72,18 @@ public class LiquidacionCompraPDF {
     }
 
     private LiquidacionCompra xmlToObject() {
-        LiquidacionCompra factura = null;
+        LiquidacionCompra liquidacionCompra = null;
         try {
             File file = new File(this.rutaArchivo);
             JAXBContext jaxbContext = JAXBContext.newInstance(LiquidacionCompra.class);
 
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            factura = (LiquidacionCompra) jaxbUnmarshaller.unmarshal(file);
+            liquidacionCompra = (LiquidacionCompra) jaxbUnmarshaller.unmarshal(file);
 
         } catch (JAXBException ex) {
             Logger.getLogger(LiquidacionCompraPDF.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return factura;
+        return liquidacionCompra;
 
     }
 
