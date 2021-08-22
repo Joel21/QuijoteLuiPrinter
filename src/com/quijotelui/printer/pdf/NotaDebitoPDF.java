@@ -137,7 +137,12 @@ public class NotaDebitoPDF {
         param.put("DOC_MODIFICADO", Tipos.obtenerDocumentoModificado(notaDebito.getCodDocModificado()));
 
         TotalComprobante tc = getTotales(notaDebito);
-
+        param.put("IVA", tc.getIva12());
+        param.put("IVA_0", tc.getSubtotal0());
+        param.put("IVA_12", tc.getSubtotal12());
+        param.put("EXENTO_IVA", new BigDecimal(0.0D).setScale(2));
+        param.put("NO_OBJETO_IVA", tc.getSubtotalNoSujetoIva());
+        param.put("SUBTOTAL", notaDebito.getTotalSinImpuestos().toString());
         param.put("VALOR_TOTAL", notaDebito.getValorTotal());
 
         return param;
@@ -150,17 +155,18 @@ public class NotaDebitoPDF {
 
     private TotalComprobante getTotales(NotaDebito.InfoNotaDebito infoNotaDebito) {
 
+        BigDecimal iva = new BigDecimal(0.0D);
         BigDecimal totalIva = new BigDecimal(0.0D);
         BigDecimal totalIva0 = new BigDecimal(0.0D);
-        BigDecimal totalICE = new BigDecimal(0.0D);
         BigDecimal totalExentoIVA = new BigDecimal(0.0D);
         BigDecimal totalSinImpuesto = new BigDecimal(0.0D);
 
         TotalComprobante tc = new TotalComprobante();
         for (Impuesto ti : infoNotaDebito.getImpuestos().getImpuesto()) {
             Integer cod = new Integer(ti.getCodigo());
-            if (TipoImpuestoEnum.IVA.getCode() == cod.intValue() && ti.getValor().doubleValue() > 0.0D) {
-
+            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && ((TipoImpuestoIvaEnum.IVA_VENTA_12.getCode().equals(ti.getCodigoPorcentaje())) || (TipoImpuestoIvaEnum.IVA_VENTA_14.getCode().equals(ti.getCodigoPorcentaje())))) {
+                totalIva = totalIva.add(ti.getBaseImponible());
+                iva = iva.add(ti.getValor());
             }
             if (TipoImpuestoEnum.IVA.getCode() == cod.intValue() && TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
@@ -168,14 +174,12 @@ public class NotaDebitoPDF {
                 totalSinImpuesto = totalSinImpuesto.add(ti.getBaseImponible());
             if (TipoImpuestoEnum.IVA.getCode() == cod.intValue() && TipoImpuestoIvaEnum.IVA_EXCENTO.getCode().equals(ti.getCodigoPorcentaje()))
                 totalExentoIVA = totalExentoIVA.add(ti.getBaseImponible());
-            if (TipoImpuestoEnum.ICE.getCode() == cod.intValue())
-                totalICE = totalICE.add(ti.getValor());
         }
-        tc.setSubtotal0(totalIva0.toString());
+        tc.setSubtotal12(totalIva.setScale(2).toString());
+        tc.setSubtotal0(totalIva0.setScale(2).toString());
         tc.setSubtotal(totalIva.add(totalIva0).add(totalExentoIVA).add(totalSinImpuesto).setScale(2));
-        tc.setTotalIce(totalICE.toString());
-        tc.setSubtotalNoSujetoIva(totalSinImpuesto.toString());
-        tc.setIva12("0.12");
+        tc.setSubtotalNoSujetoIva(totalSinImpuesto.setScale(2).toString());
+        tc.setIva12(iva.toString());
         return tc;
     }
 }
