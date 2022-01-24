@@ -50,7 +50,7 @@ public class Parametros {
         param.put("RAZON_SOCIAL", infoTributaria.getRazonSocial());
         param.put("DIR_MATRIZ", infoTributaria.getDirMatriz());
         param.put("AGENTE_RETENCION", infoTributaria.getAgenteRetencion());
-        param.put("REGIMEN_MICROEMPRESAS", infoTributaria.getRegimenMicroempresas());
+        param.put("CONTRIBUYENTE_RIMPE", infoTributaria.getContribuyenteRimpe());
         try {
             param.put("LOGO", new FileInputStream(this.direccionLogoJpeg));
 //            param.put("LOGO", new FileInputStream("resources/images/logo.jpeg"));
