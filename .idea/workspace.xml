@@ -3,9 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1b7dda71-cdab-4c50-81e6-b96db76ea11f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/comprobanteRetencion.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/comprobanteRetencion.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.amp.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.amp.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.fat.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.fat.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/factura.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/factura.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/facturaInfoAdicional.jasper" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/facturaInfoAdicional.jasper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/guiaRemisionFinal.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/guiaRemisionFinal.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/liquidacionCompra.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/liquidacionCompra.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/notaCredito.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/notaCredito.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/reportes/notaDebito.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/reportes/notaDebito.jrxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/quijotelui/printer/adicional/InfoTributaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quijotelui/printer/adicional/InfoTributaria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/quijotelui/printer/parametros/Parametros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/quijotelui/printer/parametros/Parametros.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +107,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../QuijoteLuiS/quijotelui" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">

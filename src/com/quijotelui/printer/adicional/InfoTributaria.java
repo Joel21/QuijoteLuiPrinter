@@ -26,8 +26,8 @@ import javax.xml.bind.annotation.XmlType;
         "ptoEmi",
         "secuencial",
         "dirMatriz",
-        "contribuyenteRimpe",
-        "agenteRetencion"})
+        "agenteRetencion",
+        "contribuyenteRimpe"})
 public class InfoTributaria {
 
     @XmlElement(required = true)

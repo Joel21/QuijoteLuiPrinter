@@ -57,7 +57,7 @@
 	<parameter name="DIR_SUCURSAL" class="java.lang.String"/>
 	<parameter name="CONT_ESPECIAL" class="java.lang.String"/>
 	<parameter name="LLEVA_CONTABILIDAD" class="java.lang.String"/>
-	<parameter name="REGIMEN_MICROEMPRESAS" class="java.lang.String"/>
+	<parameter name="CONTRIBUYENTE_RIMPE" class="java.lang.String"/>
 	<parameter name="AGENTE_RETENCION" class="java.lang.String"/>
 	<parameter name="RS_COMPRADOR" class="java.lang.String"/>
 	<parameter name="RUC_COMPRADOR" class="java.lang.String"/>
@@ -339,7 +339,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="7" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{REGIMEN_MICROEMPRESAS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{CONTRIBUYENTE_RIMPE}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="193" y="284" width="51" height="14" uuid="8c377d9a-f0f0-4973-84dd-01731faddecb"/>

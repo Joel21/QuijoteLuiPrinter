@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="guiaRemisionFinal" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c5acd95-5b2e-454a-aa56-d6a8a31d5c06">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="62"/>
+	<property name="ireport.y" value="110"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -79,7 +79,7 @@
 	<parameter name="PUNTO_PARTIDA" class="java.lang.String"/>
 	<parameter name="INFO_ADICIONAL" class="java.util.Collection"/>
 	<parameter name="NOM_COMERCIAL" class="java.lang.String"/>
-	<parameter name="REGIMEN_MICROEMPRESAS" class="java.lang.String"/>
+	<parameter name="CONTRIBUYENTE_RIMPE" class="java.lang.String"/>
 	<field name="nombreComprobante" class="java.lang.String"/>
 	<field name="numDocSustento" class="java.lang.String"/>
 	<field name="fechaEmisionSustento" class="java.lang.String"/>
@@ -263,7 +263,7 @@
 				<text><![CDATA[Contribuyente Especial Nro ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="5" y="221" width="177" height="14" uuid="a26afc13-9d32-4132-9a82-b62d080322da"/>
+				<reportElement x="5" y="221" width="188" height="14" uuid="a26afc13-9d32-4132-9a82-b62d080322da"/>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="true"/>
 				</textElement>
@@ -298,7 +298,7 @@
 				<textFieldExpression><![CDATA[$P{CONT_ESPECIAL}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="188" y="222" width="51" height="14" uuid="2ecc22f5-8abb-4373-b3eb-33fcbb16b6c0"/>
+				<reportElement x="202" y="222" width="51" height="14" uuid="2ecc22f5-8abb-4373-b3eb-33fcbb16b6c0"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7" isBold="true"/>
 				</textElement>
@@ -372,7 +372,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="7" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{REGIMEN_MICROEMPRESAS}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{CONTRIBUYENTE_RIMPE}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="6" y="252" width="187" height="14" uuid="1e125b7b-80a4-4c42-9dc8-550880459f3f">
