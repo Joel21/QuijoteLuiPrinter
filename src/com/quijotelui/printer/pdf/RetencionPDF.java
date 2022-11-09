@@ -67,19 +67,18 @@ public class RetencionPDF {
     }
 
     private ComprobanteRetencion xmlToObject() {
-        ComprobanteRetencion factura = null;
+        ComprobanteRetencion retencion = null;
         try {
             File file = new File(rutaArchivo);
             JAXBContext jaxbContext = JAXBContext.newInstance(ComprobanteRetencion.class);
 
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            factura = (ComprobanteRetencion) jaxbUnmarshaller.unmarshal(file);
-//            System.out.println(factura);
+            retencion = (ComprobanteRetencion) jaxbUnmarshaller.unmarshal(file);
 
         } catch (JAXBException ex) {
             Logger.getLogger(RetencionPDF.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return factura;
+        return retencion;
 
     }
 
@@ -92,9 +91,12 @@ public class RetencionPDF {
         FileInputStream is = null;
         Parametros p = new Parametros(this.directorioReportes, this.directorioLogo);
         try {
-            JRDataSource dataSource = new JRBeanCollectionDataSource(rep.getDetallesAdiciones());
+            JRDataSource dataSource = new JRBeanCollectionDataSource(
+                    rep.getDetallesAdiciones()
+            );
             is = new FileInputStream(urlReporte);
-            JasperPrint reporte_view = JasperFillManager.fillReport(is, obtenerMapaParametrosReportes(p.obtenerParametrosInfoTriobutaria(rep.getComprobanteRetencion().getInfoTributaria(), numAut, fechaAut), obtenerInfoCompRetencion(rep.getComprobanteRetencion().getInfoCompRetencion())), dataSource);
+            JasperPrint reporte_view = JasperFillManager
+                    .fillReport(is, obtenerMapaParametrosReportes(p.obtenerParametrosInfoTriobutaria(rep.getComprobanteRetencion().getInfoTributaria(), numAut, fechaAut), obtenerInfoCompRetencion(rep.getComprobanteRetencion().getInfoCompRetencion())), dataSource);
 
             savePdfReport(reporte_view, rep.getComprobanteRetencion().getInfoTributaria().claveAcceso);
         } catch (FileNotFoundException | JRException ex) {

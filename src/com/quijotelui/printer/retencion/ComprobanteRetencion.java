@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.quijotelui.printer.retencion;
 
 /**
@@ -24,256 +19,223 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="", propOrder={"infoTributaria", "infoCompRetencion", "impuestos", "infoAdicional"})
-@XmlRootElement(name="comprobanteRetencion")
-public class ComprobanteRetencion
-{
+@XmlType(propOrder = {
+    "infoTributaria",
+    "infoCompRetencion",
+    "sustentos",
+    "infoAdicional"
+})
+@XmlRootElement(name = "comprobanteRetencion")
+public class ComprobanteRetencion {
 
-  @XmlElement(required=true)
-  protected InfoTributaria infoTributaria;
+    @XmlElement(required = true)
+    InfoTributaria infoTributaria;
 
-  @XmlElement(required=true)
-  protected InfoCompRetencion infoCompRetencion;
+    @XmlElement(required = true)
+    InfoCompRetencion infoCompRetencion;
 
-  @XmlElement(required=true)
-  protected Impuestos impuestos;
-  protected InfoAdicional infoAdicional;
+    @XmlElement(required = true, name = "docsSustento")
+    Sustentos sustentos;
+    
+    InfoAdicional infoAdicional;
 
-  @XmlAttribute
-  protected String id;
+    @XmlAttribute
+    String id;
 
-  @XmlAttribute(required=true)
-  @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-  @XmlSchemaType(name="NMTOKEN")
-  protected String version;
+    @XmlAttribute(required = true)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "NMTOKEN")
+    String version;
 
-  public InfoTributaria getInfoTributaria()
-  {
-    return this.infoTributaria;
-  }
-
-  public void setInfoTributaria(InfoTributaria value)
-  {
-    this.infoTributaria = value;
-  }
-
-  public InfoCompRetencion getInfoCompRetencion()
-  {
-    return this.infoCompRetencion;
-  }
-
-  public void setInfoCompRetencion(InfoCompRetencion value)
-  {
-    this.infoCompRetencion = value;
-  }
-
-  public Impuestos getImpuestos()
-  {
-    return this.impuestos;
-  }
-
-  public void setImpuestos(Impuestos value)
-  {
-    this.impuestos = value;
-  }
-
-  public InfoAdicional getInfoAdicional()
-  {
-    return this.infoAdicional;
-  }
-
-  public void setInfoAdicional(InfoAdicional value)
-  {
-    this.infoAdicional = value;
-  }
-
-  public String getId()
-  {
-    return this.id;
-  }
-
-  public void setId(String value)
-  {
-    this.id = value;
-  }
-
-  public String getVersion()
-  {
-    return this.version;
-  }
-
-  public void setVersion(String value)
-  {
-    this.version = value;
-  }
-
-  @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name="", propOrder={"fechaEmision", "dirEstablecimiento", "contribuyenteEspecial", "obligadoContabilidad", "tipoIdentificacionSujetoRetenido", "razonSocialSujetoRetenido", "identificacionSujetoRetenido", "periodoFiscal"})
-  public static class InfoCompRetencion
-  {
-
-    @XmlElement(required=true)
-    protected String fechaEmision;
-    protected String dirEstablecimiento;
-    protected String contribuyenteEspecial;
-    protected String obligadoContabilidad;
-
-    @XmlElement(required=true)
-    protected String tipoIdentificacionSujetoRetenido;
-
-    @XmlElement(required=true)
-    protected String razonSocialSujetoRetenido;
-
-    @XmlElement(required=true)
-    protected String identificacionSujetoRetenido;
-
-    @XmlElement(required=true)
-    protected String periodoFiscal;
-
-    public String getFechaEmision()
-    {
-      return this.fechaEmision;
+    public InfoTributaria getInfoTributaria() {
+        return this.infoTributaria;
     }
 
-    public void setFechaEmision(String value)
-    {
-      this.fechaEmision = value;
+    public void setInfoTributaria(InfoTributaria value) {
+        this.infoTributaria = value;
     }
 
-    public String getDirEstablecimiento()
-    {
-      return this.dirEstablecimiento;
+    public InfoCompRetencion getInfoCompRetencion() {
+        return this.infoCompRetencion;
     }
 
-    public void setDirEstablecimiento(String value)
-    {
-      this.dirEstablecimiento = value;
+    public void setInfoCompRetencion(InfoCompRetencion value) {
+        this.infoCompRetencion = value;
     }
 
-    public String getContribuyenteEspecial()
-    {
-      return this.contribuyenteEspecial;
+    public Sustentos getSustentos() {
+        return sustentos;
     }
 
-    public void setContribuyenteEspecial(String value)
-    {
-      this.contribuyenteEspecial = value;
+    public void setSustentos(Sustentos sustentos) {
+        this.sustentos = sustentos;
     }
 
-    public String getObligadoContabilidad()
-    {
-      return this.obligadoContabilidad;
+    public InfoAdicional getInfoAdicional() {
+        return this.infoAdicional;
     }
 
-    public void setObligadoContabilidad(String value)
-    {
-      this.obligadoContabilidad = value;
+    public void setInfoAdicional(InfoAdicional value) {
+        this.infoAdicional = value;
     }
 
-    public String getTipoIdentificacionSujetoRetenido()
-    {
-      return this.tipoIdentificacionSujetoRetenido;
+    public String getId() {
+        return this.id;
     }
 
-    public void setTipoIdentificacionSujetoRetenido(String value)
-    {
-      this.tipoIdentificacionSujetoRetenido = value;
+    public void setId(String value) {
+        this.id = value;
     }
 
-    public String getRazonSocialSujetoRetenido()
-    {
-      return this.razonSocialSujetoRetenido;
+    public String getVersion() {
+        return this.version;
     }
 
-    public void setRazonSocialSujetoRetenido(String value)
-    {
-      this.razonSocialSujetoRetenido = value;
-    }
-
-    public String getIdentificacionSujetoRetenido()
-    {
-      return this.identificacionSujetoRetenido;
-    }
-
-    public void setIdentificacionSujetoRetenido(String value)
-    {
-      this.identificacionSujetoRetenido = value;
-    }
-
-    public String getPeriodoFiscal()
-    {
-      return this.periodoFiscal;
-    }
-
-    public void setPeriodoFiscal(String value)
-    {
-      this.periodoFiscal = value;
-    }
-  }
-
-  @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name="", propOrder={"campoAdicional"})
-  public static class InfoAdicional
-  {
-
-    @XmlElement(required=true)
-    protected List<CampoAdicional> campoAdicional;
-
-    public List<CampoAdicional> getCampoAdicional()
-    {
-      if (this.campoAdicional == null) {
-        this.campoAdicional = new ArrayList();
-      }
-      return this.campoAdicional;
+    public void setVersion(String value) {
+        this.version = value;
     }
 
     @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name="", propOrder={"value"})
-    public static class CampoAdicional
-    {
+    @XmlType(name = "", propOrder = {"fechaEmision", "dirEstablecimiento", "contribuyenteEspecial", "obligadoContabilidad", "tipoIdentificacionSujetoRetenido", "razonSocialSujetoRetenido", "identificacionSujetoRetenido", "periodoFiscal"})
+    public static class InfoCompRetencion {
 
-      @XmlValue
-      protected String value;
+        @XmlElement(required = true)
+        String fechaEmision;
+        String dirEstablecimiento;
+        String contribuyenteEspecial;
+        String obligadoContabilidad;
 
-      @XmlAttribute
-      protected String nombre;
+        @XmlElement(required = true)
+        String tipoIdentificacionSujetoRetenido;
 
-      public String getValue()
-      {
-        return this.value;
-      }
+        @XmlElement(required = true)
+        String razonSocialSujetoRetenido;
 
-      public void setValue(String value)
-      {
-        this.value = value;
-      }
+        @XmlElement(required = true)
+        String identificacionSujetoRetenido;
 
-      public String getNombre()
-      {
-        return this.nombre;
-      }
+        @XmlElement(required = true)
+        String periodoFiscal;
 
-      public void setNombre(String value)
-      {
-        this.nombre = value;
-      }
+        public String getFechaEmision() {
+            return this.fechaEmision;
+        }
+
+        public void setFechaEmision(String value) {
+            this.fechaEmision = value;
+        }
+
+        public String getDirEstablecimiento() {
+            return this.dirEstablecimiento;
+        }
+
+        public void setDirEstablecimiento(String value) {
+            this.dirEstablecimiento = value;
+        }
+
+        public String getContribuyenteEspecial() {
+            return this.contribuyenteEspecial;
+        }
+
+        public void setContribuyenteEspecial(String value) {
+            this.contribuyenteEspecial = value;
+        }
+
+        public String getObligadoContabilidad() {
+            return this.obligadoContabilidad;
+        }
+
+        public void setObligadoContabilidad(String value) {
+            this.obligadoContabilidad = value;
+        }
+
+        public String getTipoIdentificacionSujetoRetenido() {
+            return this.tipoIdentificacionSujetoRetenido;
+        }
+
+        public void setTipoIdentificacionSujetoRetenido(String value) {
+            this.tipoIdentificacionSujetoRetenido = value;
+        }
+
+        public String getRazonSocialSujetoRetenido() {
+            return this.razonSocialSujetoRetenido;
+        }
+
+        public void setRazonSocialSujetoRetenido(String value) {
+            this.razonSocialSujetoRetenido = value;
+        }
+
+        public String getIdentificacionSujetoRetenido() {
+            return this.identificacionSujetoRetenido;
+        }
+
+        public void setIdentificacionSujetoRetenido(String value) {
+            this.identificacionSujetoRetenido = value;
+        }
+
+        public String getPeriodoFiscal() {
+            return this.periodoFiscal;
+        }
+
+        public void setPeriodoFiscal(String value) {
+            this.periodoFiscal = value;
+        }
     }
-  }
 
-  @XmlAccessorType(XmlAccessType.FIELD)
-  @XmlType(name="", propOrder={"impuesto"})
-  public static class Impuestos
-  {
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {"campoAdicional"})
+    public static class InfoAdicional {
 
-    @XmlElement(required=true)
-    protected List<Impuesto> impuesto;
+        @XmlElement(required = true)
+        List<CampoAdicional> campoAdicional;
 
-    public List<Impuesto> getImpuesto()
-    {
-      if (this.impuesto == null) {
-        this.impuesto = new ArrayList();
-      }
-      return this.impuesto;
+        public List<CampoAdicional> getCampoAdicional() {
+            if (this.campoAdicional == null) {
+                this.campoAdicional = new ArrayList();
+            }
+            return this.campoAdicional;
+        }
+
+        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlType(name = "", propOrder = {"value"})
+        public static class CampoAdicional {
+
+            @XmlValue
+            String value;
+
+            @XmlAttribute
+            String nombre;
+
+            public String getValue() {
+                return this.value;
+            }
+
+            public void setValue(String value) {
+                this.value = value;
+            }
+
+            public String getNombre() {
+                return this.nombre;
+            }
+
+            public void setNombre(String value) {
+                this.nombre = value;
+            }
+        }
     }
-  }
+
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(propOrder = {"sustento"})
+    public static class Sustentos {
+
+        @XmlElement(required = true, name = "docSustento")
+        List<Sustento> sustento;
+
+        public List<Sustento> getSustento() {
+            if (this.sustento == null) {
+                this.sustento = new ArrayList();
+            }
+            return this.sustento;
+        }
+    }
 }

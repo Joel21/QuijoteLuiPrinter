@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.quijotelui.printer.retencion;
 
 /**
  *
- * @author jorjoluiso
+ * @author Jorge Luis
  */
-
 import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -17,107 +11,68 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name="impuesto", propOrder={"codigo", "codigoRetencion", "baseImponible", "porcentajeRetener", "valorRetenido", "codDocSustento", "numDocSustento", "fechaEmisionDocSustento"})
-public class Impuesto
-{
+@XmlType(propOrder = {
+    "codImpuestoDocSustento",
+    "codigoPorcentaje",
+    "baseImponible",
+    "tarifa",
+    "valorImpuesto"
+})
+public class Impuesto {
 
-  @XmlElement(required=true)
-  protected String codigo;
+    @XmlElement(required = true)
+    String codImpuestoDocSustento;
 
-  @XmlElement(required=true)
-  protected String codigoRetencion;
+    @XmlElement(required = true)
+    String codigoPorcentaje;
 
-  @XmlElement(required=true)
-  protected BigDecimal baseImponible;
+    @XmlElement(required = true)
+    BigDecimal baseImponible;
 
-  @XmlElement(required=true)
-  protected BigDecimal porcentajeRetener;
+    @XmlElement(required = true)
+    BigDecimal tarifa;
 
-  @XmlElement(required=true)
-  protected BigDecimal valorRetenido;
+    @XmlElement(required = true)
+    BigDecimal valorImpuesto;    
+    
 
-  @XmlElement(required=true)
-  protected String codDocSustento;
-  protected String numDocSustento;
-  protected String fechaEmisionDocSustento;
+    public String getCodImpuestoDocSustento() {
+        return codImpuestoDocSustento;
+    }
 
-  public String getCodigo()
-  {
-    return this.codigo;
-  }
+    public void setCodImpuestoDocSustento(String codImpuestoDocSustento) {
+        this.codImpuestoDocSustento = codImpuestoDocSustento;
+    }
 
-  public void setCodigo(String value)
-  {
-    this.codigo = value;
-  }
+    public String getCodigoPorcentaje() {
+        return codigoPorcentaje;
+    }
 
-  public String getCodigoRetencion()
-  {
-    return this.codigoRetencion;
-  }
+    public void setCodigoPorcentaje(String codigoPorcentaje) {
+        this.codigoPorcentaje = codigoPorcentaje;
+    }
 
-  public void setCodigoRetencion(String value)
-  {
-    this.codigoRetencion = value;
-  }
+    public BigDecimal getBaseImponible() {
+        return baseImponible;
+    }
 
-  public BigDecimal getBaseImponible()
-  {
-    return this.baseImponible;
-  }
+    public void setBaseImponible(BigDecimal baseImponible) {
+        this.baseImponible = baseImponible;
+    }
 
-  public void setBaseImponible(BigDecimal value)
-  {
-    this.baseImponible = value;
-  }
+    public BigDecimal getTarifa() {
+        return tarifa;
+    }
 
-  public BigDecimal getPorcentajeRetener()
-  {
-    return this.porcentajeRetener;
-  }
+    public void setTarifa(BigDecimal tarifa) {
+        this.tarifa = tarifa;
+    }
 
-  public void setPorcentajeRetener(BigDecimal value)
-  {
-    this.porcentajeRetener = value;
-  }
+    public BigDecimal getValorImpuesto() {
+        return valorImpuesto;
+    }
 
-  public BigDecimal getValorRetenido()
-  {
-    return this.valorRetenido;
-  }
-
-  public void setValorRetenido(BigDecimal value)
-  {
-    this.valorRetenido = value;
-  }
-
-  public String getCodDocSustento()
-  {
-    return this.codDocSustento;
-  }
-
-  public void setCodDocSustento(String value)
-  {
-    this.codDocSustento = value;
-  }
-
-  public String getNumDocSustento()
-  {
-    return this.numDocSustento;
-  }
-
-  public void setNumDocSustento(String value)
-  {
-    this.numDocSustento = value;
-  }
-
-  public String getFechaEmisionDocSustento()
-  {
-    return this.fechaEmisionDocSustento;
-  }
-
-  public void setFechaEmisionDocSustento(String value)
-  {
-    this.fechaEmisionDocSustento = value;
-  }
+    public void setValorImpuesto(BigDecimal valorImpuesto) {
+        this.valorImpuesto = valorImpuesto;
+    }        
 }

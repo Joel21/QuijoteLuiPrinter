@@ -16,14 +16,15 @@ public class Main {
     }
 
     static void imprimir() {
-        NotaDebitoPDF pdf = new NotaDebitoPDF(
-                "/home/jorge/Projects/QuijoteLuiPrinter/recursos/reportes",
-                "/app/QuijoteLui/logo.jpeg",
-                "/app/QuijoteLui/comprobante/pdf");
+        RetencionPDF pdf = new RetencionPDF(
+                "/home/jogue/Projects/QuijoteLuiPrinter/recursos/reportes", 
+                "/app/Quijotelui/recursos/imagenes/logo.jpeg", 
+                "/app/Quijotelui/comprobante/pdf/2022/10");
+        
 
-        pdf.genera("/app/QuijoteLui/comprobante/generado/"
-                + "1808202105109170775200110010040000000011234567813.xml",
-                "1808202105109170775200110010040000000011234567813",
+        pdf.genera("/app/Quijotelui/comprobante/generado/2022/10/"
+                + "3110202207109170775200110010020000106161234567815.xml",
+                "3110202207109170775200110010020000106161234567815",
                 "01/01/0001 00:00:00");
     }
 }
