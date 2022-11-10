@@ -43,6 +43,7 @@ public class ComprobanteRetencionReporte {
             for (Retencion ret : sus.getRetenciones().getRetencion()) {
                 DetallesAdicionalesReporte detAd = new DetallesAdicionalesReporte();
                 
+                detAd.setDescripcion(ret.getCodigoRetencion().toString());
                 detAd.setBaseImponible(ret.getBaseImponible().toString());
                 detAd.setPorcentajeRetener(ret.getPorcentajeRetener().toString());
                 detAd.setValorRetenido(ret.getValorRetenido().toString());
