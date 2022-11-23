@@ -5,6 +5,10 @@ Aplicación para generar RIDE en formato PDF de los comprobantes electrónicos d
 ```
 ant
 ```
+o si aparece un error parecido a "The J2SE Platform is not correctly set up."
+```
+ant -Dplatforms.JDK_1.8.home=%JAVA_HOME%
+```
 ## Comando en terminal para publicar en el repositorio Maven Local (Linux/Mac)
 ```
 mvn install:install-file -Dfile=./dist/QuijoteLuiPrinter-1.6.jar -DgroupId=com.quijotelui.printer -DartifactId=QuijoteLuiPrinter -Dversion=1.6 -Dpackaging=jar
