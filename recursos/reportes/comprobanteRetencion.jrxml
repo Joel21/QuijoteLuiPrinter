@@ -312,30 +312,30 @@
 				<reportElement mode="Transparent" x="0" y="0" width="555" height="28" uuid="5fa39b76-790d-47d4-b184-2f895cfd5157"/>
 			</rectangle>
 			<staticText>
-				<reportElement mode="Transparent" x="288" y="5" width="80" height="12" uuid="7fe6a2b4-1c4e-4cc8-a3f7-e5d20d3d98da"/>
+				<reportElement mode="Transparent" x="288" y="5" width="78" height="18" uuid="7fe6a2b4-1c4e-4cc8-a3f7-e5d20d3d98da"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Base Imponible]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="377" y="5" width="54" height="12" uuid="635582c8-5389-43ce-8eaa-0a7858e4cc03"/>
+				<reportElement mode="Transparent" x="373" y="6" width="58" height="17" uuid="635582c8-5389-43ce-8eaa-0a7858e4cc03"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Impuesto]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="440" y="0" width="59" height="28" uuid="ce81c746-8fbc-41ad-8c0c-ec0952306a48"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Porcentaje Retención]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="508" y="4" width="44" height="12" uuid="49eef277-2900-4d70-ae24-26501afe938a"/>
+				<reportElement mode="Transparent" x="507" y="4" width="43" height="20" uuid="49eef277-2900-4d70-ae24-26501afe938a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Valor]]></text>
 			</staticText>
@@ -358,16 +358,16 @@
 				<reportElement mode="Transparent" x="69" y="0" width="1" height="28" uuid="fc29e7b8-a7ad-4f0b-bf92-ebf73b54a1ed"/>
 			</line>
 			<staticText>
-				<reportElement mode="Transparent" x="0" y="5" width="69" height="12" uuid="537eb80c-6908-48a0-b310-28f4de2413f2"/>
+				<reportElement mode="Transparent" x="0" y="6" width="69" height="17" uuid="537eb80c-6908-48a0-b310-28f4de2413f2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font fontName="Arial" size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Documento]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="81" y="5" width="51" height="12" uuid="63a3a47d-7fa1-4c19-a0e7-b48e1e88f251"/>
+				<reportElement mode="Transparent" x="86" y="7" width="51" height="17" uuid="63a3a47d-7fa1-4c19-a0e7-b48e1e88f251"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font fontName="Arial" size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Número]]></text>
 			</staticText>
@@ -377,14 +377,14 @@
 			<staticText>
 				<reportElement mode="Transparent" x="169" y="0" width="58" height="28" uuid="ab220188-b351-4ba0-831c-6685caad7ae5"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font fontName="Arial" size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Fecha Emisión]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="234" y="5" width="42" height="13" uuid="59fe16a8-c77b-4a1c-b1e4-9006be126c8a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="8" isBold="true"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Código]]></text>
 			</staticText>
