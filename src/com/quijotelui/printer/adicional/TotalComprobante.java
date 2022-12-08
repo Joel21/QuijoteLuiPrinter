@@ -21,6 +21,10 @@ public class TotalComprobante
   private String iva12;
   private String totalIce;
 
+  private String totalIRBPNR;
+
+  private String subtotalExentoIVA;
+
   public String getSubtotal12()
   {
     return this.subtotal12;
@@ -79,5 +83,21 @@ public class TotalComprobante
   public void setSubtotalNoSujetoIva(String subtotalNoSujetoIva)
   {
     this.subtotalNoSujetoIva = subtotalNoSujetoIva;
+  }
+
+  public String getTotalIRBPNR() {
+    return totalIRBPNR;
+  }
+
+  public void setTotalIRBPNR(String totalIRBPNR) {
+    this.totalIRBPNR = totalIRBPNR;
+  }
+
+  public String getSubtotalExentoIVA() {
+    return subtotalExentoIVA;
+  }
+
+  public void setSubtotalExentoIVA(String subtotalExentoIVA) {
+    this.subtotalExentoIVA = subtotalExentoIVA;
   }
 }

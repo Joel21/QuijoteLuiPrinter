@@ -50,7 +50,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
  */
 public class FacturaPDF {
 
-    String rutaArchivo;//"/app/quijotelu/generado/1912201401100245687700110010030000000031234567810.xml"  
+    String rutaArchivo;
     String directorioReportes;
     String directorioLogo;
     String directorioDestino;
@@ -151,8 +151,8 @@ public class FacturaPDF {
         param.put("IVA_0", tc.getSubtotal0());
         param.put("IVA_12", tc.getSubtotal12());
         param.put("ICE", tc.getTotalIce());
-        param.put("IRBPNR", 0);
-        param.put("EXENTO_IVA", "0");
+        param.put("IRBPNR", tc.getTotalIRBPNR());
+        param.put("EXENTO_IVA", tc.getSubtotalExentoIVA());
         param.put("NO_OBJETO_IVA", tc.getSubtotalNoSujetoIva());
         param.put("SUBTOTAL", infoFactura.getTotalSinImpuestos().toString());
         if (infoFactura.getPropina() != null) {
@@ -176,36 +176,41 @@ public class FacturaPDF {
     }
 
     private TotalComprobante getTotales(Factura.InfoFactura infoFactura) {
-        BigDecimal totalIva12 = new BigDecimal(0.0D);
+        BigDecimal totalIvaDiferenteDe0 = new BigDecimal(0.0D);
         BigDecimal totalIva0 = new BigDecimal(0.0D);
         BigDecimal iva12 = new BigDecimal(0.0D);
         BigDecimal totalICE = new BigDecimal(0.0D);
+        BigDecimal totalExentoIVA = new BigDecimal(0.0D);
+        BigDecimal totalIRBPNR = new BigDecimal(0.0D);
         BigDecimal totalSinImpuesto = new BigDecimal(0.0D);
         TotalComprobante tc = new TotalComprobante();
         for (Factura.InfoFactura.TotalConImpuestos.TotalImpuesto ti : infoFactura.getTotalConImpuestos().getTotalImpuesto()) {
             Integer cod = new Integer(ti.getCodigo());
-            /*
-                Modificado para IVA 12% y 14%
-             */
+
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && ((TipoImpuestoIvaEnum.IVA_VENTA_12.getCode().equals(ti.getCodigoPorcentaje())) || (TipoImpuestoIvaEnum.IVA_VENTA_14.getCode().equals(ti.getCodigoPorcentaje())))) {
-                totalIva12 = totalIva12.add(ti.getBaseImponible());
+                totalIvaDiferenteDe0 = totalIvaDiferenteDe0.add(ti.getBaseImponible());
                 iva12 = iva12.add(ti.getValor());
             }
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
             }
-            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_EXCENTO.getCode().equals(ti.getCodigoPorcentaje()))) {
-                totalSinImpuesto = totalSinImpuesto.add(ti.getBaseImponible());
+            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_EXCENTO.getCode().equals(ti.getCodigoPorcentaje()))) {
+                totalExentoIVA = totalExentoIVA.add(ti.getBaseImponible());
             }
             if (TipoImpuestoEnum.ICE.getCode() == cod.intValue()) {
                 totalICE = totalICE.add(ti.getValor());
             }
+            if (TipoImpuestoEnum.IRBPNR.getCode() == cod.intValue()) {
+                totalIRBPNR = totalIRBPNR.add(ti.getValor());
+            }
         }
         tc.setIva12(iva12.toString());
         tc.setSubtotal0(totalIva0.toString());
-        tc.setSubtotal12(totalIva12.toString());
+        tc.setSubtotal12(totalIvaDiferenteDe0.toString());
         tc.setTotalIce(totalICE.toString());
-        tc.setSubtotal(totalIva0.add(totalIva12));
+        tc.setTotalIRBPNR(totalIRBPNR.toString());
+        tc.setSubtotalExentoIVA(totalExentoIVA.toString());
+        tc.setSubtotal(totalIva0.add(totalIvaDiferenteDe0));
         tc.setSubtotalNoSujetoIva(totalSinImpuesto.toString());
         return tc;
     }

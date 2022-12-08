@@ -189,7 +189,7 @@ public class LiquidacionCompraPDF {
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
             }
-            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_EXCENTO.getCode().equals(ti.getCodigoPorcentaje()))) {
+            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_EXCENTO.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalSinImpuesto = totalSinImpuesto.add(ti.getBaseImponible());
             }
             if (TipoImpuestoEnum.ICE.getCode() == cod.intValue()) {
