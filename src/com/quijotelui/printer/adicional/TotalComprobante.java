@@ -25,6 +25,8 @@ public class TotalComprobante
 
   private String subtotalExentoIVA;
 
+  private String ivaPorcentaje;
+
   public String getSubtotal12()
   {
     return this.subtotal12;
@@ -99,5 +101,13 @@ public class TotalComprobante
 
   public void setSubtotalExentoIVA(String subtotalExentoIVA) {
     this.subtotalExentoIVA = subtotalExentoIVA;
+  }
+
+  public String getIvaPorcentaje() {
+    return ivaPorcentaje;
+  }
+
+  public void setIvaPorcentaje(String ivaPorcentaje) {
+    this.ivaPorcentaje = ivaPorcentaje;
   }
 }

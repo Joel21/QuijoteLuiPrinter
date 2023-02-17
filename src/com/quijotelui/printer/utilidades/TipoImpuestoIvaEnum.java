@@ -15,7 +15,9 @@ public enum TipoImpuestoIvaEnum
   IVA_VENTA_12("2"),
   IVA_VENTA_14("3"),
   IVA_NO_OBJETO("6"),
-  IVA_EXCENTO("7");
+  IVA_EXCENTO("7"),
+  IVA_DIFERENCIADO("8");
+
 
   private String code;
 

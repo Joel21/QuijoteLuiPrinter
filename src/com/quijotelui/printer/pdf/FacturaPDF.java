@@ -23,6 +23,7 @@ import com.quijotelui.printer.adicional.TotalComprobante;
 import com.quijotelui.printer.factura.Factura;
 import com.quijotelui.printer.factura.FacturaReporte;
 import com.quijotelui.printer.parametros.Parametros;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -37,6 +38,7 @@ import java.util.logging.Logger;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
+
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperExportManager;
@@ -45,7 +47,6 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 /**
- *
  * @author jorjoluiso
  */
 public class FacturaPDF {
@@ -62,9 +63,9 @@ public class FacturaPDF {
     }
 
     public void genera(String rutaArchivo, String numeroAutorizacion, String fechaAutorizacion) {
-        
+
         this.rutaArchivo = rutaArchivo;
-        
+
         Factura f = xmlToObject();
 
         FacturaReporte fr = new FacturaReporte(f);
@@ -100,13 +101,13 @@ public class FacturaPDF {
         try {
             JRDataSource dataSource = new JRBeanCollectionDataSource(fact.getDetallesAdiciones());
             is = new FileInputStream(urlReporte);
-            JasperPrint reporte_view = JasperFillManager.fillReport(is, 
+            JasperPrint reporte_view = JasperFillManager.fillReport(is,
                     obtenerMapaParametrosReportes(
-                            p.obtenerParametrosInfoTriobutaria(fact.getFactura().getInfoTributaria(), 
-                                    numAut, 
-                                    fechaAut), 
-                            obtenerInfoFactura(fact.getFactura().getInfoFactura(), 
-                                    fact)), 
+                            p.obtenerParametrosInfoTriobutaria(fact.getFactura().getInfoTributaria(),
+                                    numAut,
+                                    fechaAut),
+                            obtenerInfoFactura(fact.getFactura().getInfoFactura(),
+                                    fact)),
                     dataSource);
             savePdfReport(reporte_view, fact.getFactura().getInfoTributaria().claveAcceso);
         } catch (FileNotFoundException | JRException /*| JRException */ex) {
@@ -147,6 +148,7 @@ public class FacturaPDF {
         TotalComprobante tc = getTotales(infoFactura);
         param.put("VALOR_TOTAL", infoFactura.getImporteTotal());
         param.put("DESCUENTO", infoFactura.getTotalDescuento());
+        param.put("IVA_VALOR", tc.getIvaPorcentaje());
         param.put("IVA", tc.getIva12());
         param.put("IVA_0", tc.getSubtotal0());
         param.put("IVA_12", tc.getSubtotal12());
@@ -183,13 +185,20 @@ public class FacturaPDF {
         BigDecimal totalExentoIVA = new BigDecimal(0.0D);
         BigDecimal totalIRBPNR = new BigDecimal(0.0D);
         BigDecimal totalSinImpuesto = new BigDecimal(0.0D);
+        String ivaPorcentaje = "";
         TotalComprobante tc = new TotalComprobante();
         for (Factura.InfoFactura.TotalConImpuestos.TotalImpuesto ti : infoFactura.getTotalConImpuestos().getTotalImpuesto()) {
             Integer cod = new Integer(ti.getCodigo());
 
-            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && ((TipoImpuestoIvaEnum.IVA_VENTA_12.getCode().equals(ti.getCodigoPorcentaje())) || (TipoImpuestoIvaEnum.IVA_VENTA_14.getCode().equals(ti.getCodigoPorcentaje())))) {
+            if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) &&
+                    (
+                            (TipoImpuestoIvaEnum.IVA_VENTA_12.getCode().equals(ti.getCodigoPorcentaje()))
+                                    || (TipoImpuestoIvaEnum.IVA_VENTA_14.getCode().equals(ti.getCodigoPorcentaje()))
+                                    || (TipoImpuestoIvaEnum.IVA_DIFERENCIADO.getCode().equals(ti.getCodigoPorcentaje()))
+                    )) {
                 totalIvaDiferenteDe0 = totalIvaDiferenteDe0.add(ti.getBaseImponible());
                 iva12 = iva12.add(ti.getValor());
+                ivaPorcentaje = ti.getTarifa().toBigInteger().toString();
             }
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
@@ -204,6 +213,7 @@ public class FacturaPDF {
                 totalIRBPNR = totalIRBPNR.add(ti.getValor());
             }
         }
+        tc.setIvaPorcentaje(ivaPorcentaje);
         tc.setIva12(iva12.toString());
         tc.setSubtotal0(totalIva0.toString());
         tc.setSubtotal12(totalIvaDiferenteDe0.toString());

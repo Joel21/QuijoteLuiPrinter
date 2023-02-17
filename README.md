@@ -11,12 +11,12 @@ ant -Dplatforms.JDK_1.8.home=%JAVA_HOME%
 ```
 ## Comando en terminal para publicar en el repositorio Maven Local (Linux/Mac)
 ```
-mvn install:install-file -Dfile=./dist/QuijoteLuiPrinter-1.7.jar -DgroupId=com.quijotelui.printer -DartifactId=QuijoteLuiPrinter -Dversion=1.7 -Dpackaging=jar
+mvn install:install-file -Dfile=./dist/QuijoteLuiPrinter-1.8.jar -DgroupId=com.quijotelui.printer -DartifactId=QuijoteLuiPrinter -Dversion=1.8 -Dpackaging=jar
 ```
 ## Comando en terminal para publicar en el repositorio Maven Local (Windows)
 ```
 cd .\dist\
-mvn install:install-file "-Dfile=QuijoteLuiPrinter-1.7.jar" "-DgroupId=com.quijotelui.printer" "-DartifactId=QuijoteLuiPrinter" "-Dversion=1.7" "-Dpackaging=jar"
+mvn install:install-file "-Dfile=QuijoteLuiPrinter-1.8.jar" "-DgroupId=com.quijotelui.printer" "-DartifactId=QuijoteLuiPrinter" "-Dversion=1.8" "-Dpackaging=jar"
 ```
 ### Documentación
 https://mestizos.dev/quijotelui-printer/

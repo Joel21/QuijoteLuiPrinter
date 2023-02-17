@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a90b5cc6-9a35-48d7-a2d0-ef67a99b13b8">
 	<property name="ireport.zoom" value="1.6934217901613318"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="144"/>
+	<property name="ireport.y" value="576"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -82,6 +82,7 @@
 	<parameter name="IRBPNR" class="java.math.BigDecimal"/>
 	<parameter name="EXENTO_IVA" class="java.lang.String"/>
 	<parameter name="SUBREPORT_PAGOS" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="IVA_VALOR" class="java.lang.String"/>
 	<field name="codigoPrincipal" class="java.lang.String"/>
 	<field name="codigoAuxiliar" class="java.lang.String"/>
 	<field name="cantidad" class="java.lang.String"/>
@@ -569,11 +570,11 @@
 				<text><![CDATA[Subtotal sin Impuestos]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Transparent" x="367" y="110" width="95" height="15" uuid="1a4faae2-c7c0-4e7a-8114-f1cf639de60f"/>
+				<reportElement mode="Transparent" x="367" y="110" width="66" height="15" uuid="1a4faae2-c7c0-4e7a-8114-f1cf639de60f"/>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[IVA 12%]]></text>
+				<text><![CDATA[IVA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="367" y="155" width="86" height="15" uuid="171715a6-c80c-4283-923e-5e0211e0116d"/>
@@ -644,7 +645,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Subtotal IVA 12%]]></text>
+				<text><![CDATA[Subtotal IVA]]></text>
 			</staticText>
 			<textField>
 				<reportElement mode="Transparent" x="488" y="5" width="64" height="15" uuid="c14c7ddc-0894-4643-a85c-abd37aeaa14f"/>
@@ -739,6 +740,20 @@
 					<font size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{EXENTO_IVA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="393" y="110" width="63" height="15" uuid="323fb68b-79bb-45ec-baca-7dc2261bef71"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IVA_VALOR}+"%"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="431" y="7" width="53" height="15" uuid="4a699252-d832-4cb7-98f9-21619f498782"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{IVA_VALOR}+"%"]]></textFieldExpression>
 			</textField>
 		</band>
 	</summary>
