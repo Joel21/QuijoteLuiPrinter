@@ -198,7 +198,9 @@ public class FacturaPDF {
                     )) {
                 totalIvaDiferenteDe0 = totalIvaDiferenteDe0.add(ti.getBaseImponible());
                 iva12 = iva12.add(ti.getValor());
-                ivaPorcentaje = ti.getTarifa().toBigInteger().toString();
+                
+                BigDecimal value = ti.getTarifa() == null ? new BigDecimal("-1") : ti.getTarifa();
+                ivaPorcentaje = value.toBigInteger().toString();
             }
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
