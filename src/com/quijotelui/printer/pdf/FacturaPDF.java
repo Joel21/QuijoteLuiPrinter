@@ -180,27 +180,31 @@ public class FacturaPDF {
     private TotalComprobante getTotales(Factura.InfoFactura infoFactura) {
         BigDecimal totalIvaDiferenteDe0 = new BigDecimal(0.0D);
         BigDecimal totalIva0 = new BigDecimal(0.0D);
-        BigDecimal iva12 = new BigDecimal(0.0D);
+        BigDecimal ivaDiferenteDe0 = new BigDecimal(0.0D);
         BigDecimal totalICE = new BigDecimal(0.0D);
         BigDecimal totalExentoIVA = new BigDecimal(0.0D);
         BigDecimal totalIRBPNR = new BigDecimal(0.0D);
         BigDecimal totalSinImpuesto = new BigDecimal(0.0D);
         String ivaPorcentaje = "";
         TotalComprobante tc = new TotalComprobante();
+        
         for (Factura.InfoFactura.TotalConImpuestos.TotalImpuesto ti : infoFactura.getTotalConImpuestos().getTotalImpuesto()) {
             Integer cod = new Integer(ti.getCodigo());
 
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) &&
                     (
                             (TipoImpuestoIvaEnum.IVA_VENTA_12.getCode().equals(ti.getCodigoPorcentaje()))
+                                    || (TipoImpuestoIvaEnum.IVA_VENTA_13.getCode().equals(ti.getCodigoPorcentaje()))
                                     || (TipoImpuestoIvaEnum.IVA_VENTA_14.getCode().equals(ti.getCodigoPorcentaje()))
+                                    || (TipoImpuestoIvaEnum.IVA_VENTA_15.getCode().equals(ti.getCodigoPorcentaje()))
+                                    || (TipoImpuestoIvaEnum.IVA_VENTA_5.getCode().equals(ti.getCodigoPorcentaje()))
                                     || (TipoImpuestoIvaEnum.IVA_DIFERENCIADO.getCode().equals(ti.getCodigoPorcentaje()))
                     )) {
                 totalIvaDiferenteDe0 = totalIvaDiferenteDe0.add(ti.getBaseImponible());
-                iva12 = iva12.add(ti.getValor());
+                ivaDiferenteDe0 = ivaDiferenteDe0.add(ti.getValor());
                 
                 BigDecimal value = ti.getTarifa() == null ? new BigDecimal("-1") : ti.getTarifa();
-                ivaPorcentaje = value.toBigInteger().toString();
+                ivaPorcentaje = ivaPorcentaje + value.toBigInteger().toString() + "%";
             }
             if ((TipoImpuestoEnum.IVA.getCode() == cod.intValue()) && (TipoImpuestoIvaEnum.IVA_VENTA_0.getCode().equals(ti.getCodigoPorcentaje()))) {
                 totalIva0 = totalIva0.add(ti.getBaseImponible());
@@ -216,7 +220,7 @@ public class FacturaPDF {
             }
         }
         tc.setIvaPorcentaje(ivaPorcentaje);
-        tc.setIva12(iva12.toString());
+        tc.setIva12(ivaDiferenteDe0.toString());
         tc.setSubtotal0(totalIva0.toString());
         tc.setSubtotal12(totalIvaDiferenteDe0.toString());
         tc.setTotalIce(totalICE.toString());

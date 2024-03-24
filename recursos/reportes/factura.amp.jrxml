@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a90b5cc6-9a35-48d7-a2d0-ef67a99b13b8">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="432"/>
+	<property name="ireport.y" value="192"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -746,14 +746,14 @@
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{IVA_VALOR}+"%"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{IVA_VALOR}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement mode="Transparent" x="423" y="7" width="63" height="15" uuid="ed55a60c-9518-4fac-aba6-d953d470f3d3"/>
 				<textElement verticalAlignment="Middle">
 					<font size="7"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{IVA_VALOR}+"%"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{IVA_VALOR}]]></textFieldExpression>
 			</textField>
 		</band>
 	</summary>
