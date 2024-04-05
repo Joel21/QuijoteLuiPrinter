@@ -70,7 +70,7 @@
     nbproject/build-impl.xml file. 
 
     -->
-      <target name="-post-jar">
+    <target name="-post-jar">
         <jar jarfile="dist/QuijoteLuiPrinter-1.9.jar">
             <zipfileset src="${dist.jar}" excludes="META-INF/*"/>
             
@@ -94,7 +94,7 @@
             <exclude name="**/lib/commons-digester-1.7.jar"/> 
             <exclude name="**/lib/commons-logging-1.1.3.jar"/> 
             
-<!--            <zipfileset src="lib/commons-beanutils-1.8.2.jar" excludes="META-INF/*"/>
+            <!--            <zipfileset src="lib/commons-beanutils-1.8.2.jar" excludes="META-INF/*"/>
             <zipfileset src="lib/commons-collections-3.2.1.jar" excludes="META-INF/*"/>
             <zipfileset src="lib/commons-digester-1.7.jar" excludes="META-INF/*"/>
             <zipfileset src="lib/commons-logging-1.1.3.jar" excludes="META-INF/*"/>-->

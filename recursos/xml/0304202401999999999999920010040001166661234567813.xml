@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><factura id="comprobante" version="2.1.0"> 
+    <infoTributaria> 
+        <ambiente>2</ambiente> 
+        <tipoEmision>1</tipoEmision> 
+        <razonSocial>Jorge Luis</razonSocial> 
+        <nombreComercial>Jorge Luis</nombreComercial> 
+        <ruc>9999999999999</ruc> 
+        <claveAcceso>0304202401999999999999920010040001166661234567813</claveAcceso> 
+        <codDoc>01</codDoc> 
+        <estab>001</estab> 
+        <ptoEmi>004</ptoEmi> 
+        <secuencial>000116666</secuencial> 
+        <dirMatriz>Mi Empresita</dirMatriz> 
+        <agenteRetencion>1</agenteRetencion> 
+    </infoTributaria> 
+    <infoFactura> 
+        <fechaEmision>03/04/2024</fechaEmision> 
+        <dirEstablecimiento>Mi dirección</dirEstablecimiento> 
+        <obligadoContabilidad>SI</obligadoContabilidad> 
+        <tipoIdentificacionComprador>07</tipoIdentificacionComprador> 
+        <razonSocialComprador>CONSUMIDOR FINAL</razonSocialComprador> 
+        <identificacionComprador>9999999999999</identificacionComprador> 
+        <direccionComprador>Su Casita</direccionComprador> 
+        <totalSinImpuestos>1.45</totalSinImpuestos> 
+        <totalDescuento>0.00</totalDescuento> 
+        <totalConImpuestos> 
+            <totalImpuesto> 
+                <codigo>2</codigo> 
+                <codigoPorcentaje>4</codigoPorcentaje> 
+                <baseImponible>0.65</baseImponible> 
+                <tarifa>15</tarifa> 
+                <valor>0.1</valor> 
+            </totalImpuesto> 
+            <totalImpuesto> 
+                <codigo>2</codigo> 
+                <codigoPorcentaje>0</codigoPorcentaje> 
+                <baseImponible>0.8</baseImponible> 
+                <tarifa>0</tarifa> 
+                <valor>0</valor> 
+            </totalImpuesto> 
+        </totalConImpuestos> 
+        <propina>0.00</propina> 
+        <importeTotal>1.55</importeTotal> 
+        <moneda>DOLAR</moneda> 
+        <pagos> 
+            <pago> 
+                <formaPago>01</formaPago> 
+                <total>1.55</total> 
+            </pago> 
+        </pagos> 
+    </infoFactura> 
+    <detalles> 
+        <detalle> 
+            <codigoPrincipal>546</codigoPrincipal> 
+            <descripcion>HARINA FLOR 2LB</descripcion> 
+            <unidadMedida>UN</unidadMedida> 
+            <cantidad>1.00</cantidad> 
+            <precioUnitario>0.8000</precioUnitario> 
+            <descuento>0.00</descuento> 
+            <precioTotalSinImpuesto>0.80</precioTotalSinImpuesto> 
+            <impuestos> 
+                <impuesto> 
+                    <codigo>2</codigo> 
+                    <codigoPorcentaje>0</codigoPorcentaje> 
+                    <tarifa>0</tarifa> 
+                    <baseImponible>0.8</baseImponible> 
+                    <valor>0</valor> 
+                </impuesto> 
+            </impuestos> 
+        </detalle> 
+        <detalle> 
+            <codigoPrincipal>532</codigoPrincipal> 
+            <descripcion>BICARBONATO 1/2 LB</descripcion> 
+            <unidadMedida>UN</unidadMedida> 
+            <cantidad>1.00</cantidad> 
+            <precioUnitario>0.6521</precioUnitario> 
+            <descuento>0.00</descuento> 
+            <precioTotalSinImpuesto>0.65</precioTotalSinImpuesto> 
+            <impuestos> 
+                <impuesto> 
+                    <codigo>2</codigo> 
+                    <codigoPorcentaje>4</codigoPorcentaje> 
+                    <tarifa>15</tarifa> 
+                    <baseImponible>0.65</baseImponible> 
+                    <valor>0.1</valor> 
+                </impuesto> 
+            </impuestos> 
+        </detalle> 
+    </detalles> 
+    <infoAdicional> 
+        <campoAdicional nombre="Dirección">Su Casita</campoAdicional> 
+        <campoAdicional nombre="Observación">CONTADO</campoAdicional> 
+        <campoAdicional nombre="Pago">SIN UTILIZACION DEL SISTEMA FINANCIERO</campoAdicional> 
+        <campoAdicional nombre="Total">1.55</campoAdicional> 
+    </infoAdicional> 
+</factura>

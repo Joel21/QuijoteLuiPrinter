@@ -16,15 +16,26 @@ public class Main {
     }
 
     static void imprimir() {
+        System.out.println("QuijoteLui Printer");
+        
+        ClassLoader classLoader = Main.class.getClassLoader();
+
+        String pathXmlFile = classLoader.getResource("xml/0304202401999999999999920010040001166661234567813.xml").getPath();        
+        String pathReportsFolders = classLoader.getResource("reportes").getPath();   
+        String pathPdf = classLoader.getResource("pdf").getPath();  
+        String pathLogo = classLoader.getResource("imagenes/logo.jpeg").getPath(); 
+        
+        System.out.println(pathLogo);
+        
+        
         FacturaPDF pdf = new FacturaPDF(
-                "/home/Projects/QuijoteLuiPrinter/recursos/reportes", 
-                "/app/Quijotelui/recursos/imagenes/logo.jpeg", 
-                "/app/Quijotelui/comprobante/pdf/2022/10");
+                pathReportsFolders, 
+                pathLogo, 
+                pathPdf);
 
 
-        pdf.genera("/home/Documents/"
-                + "0712202201100000000000110059990000000031234567817.xml",
-                "0712202201100000000000110059990000000031234567817",
+        pdf.genera(pathXmlFile,
+                "0304202401999999999999920010040001166661234567813",
                 "01/01/0001 00:00:00");
     }
 }
